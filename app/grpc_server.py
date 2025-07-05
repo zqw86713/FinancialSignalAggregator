@@ -8,7 +8,7 @@ from app.services.aggregator import get_signal
 class SignalService(signal_pb2_grpc.SignalAggregatorServicer):
     async def GetSignal(self, request, context):
         symbol = request.symbol
-        signal_value = await get_signal(symbol)
+        signal_value = get_signal(symbol)
         return signal_pb2.SignalReply(symbol=symbol, signal=signal_value)
 
 

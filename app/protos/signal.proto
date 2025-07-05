@@ -1,11 +1,9 @@
 syntax = "proto3";
 
-
-package app.protos;
-
+package protos;
 
 service SignalAggregator {
-  rpc GetSignal (SignalRequest) returns (SignalResponse) {}
+  rpc GetSignal (SignalRequest) returns (SignalResponse);
 }
 
 message SignalRequest {
@@ -14,7 +12,5 @@ message SignalRequest {
 
 message SignalResponse {
   string symbol = 1;
-  double price = 2;
-  double volume = 3;
-  string timestamp = 4;
+  string signal = 2;
 }
