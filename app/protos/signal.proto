@@ -1,6 +1,8 @@
 syntax = "proto3";
 
-package aggregator;
+
+package app.protos;
+
 
 service SignalAggregator {
   rpc GetSignal (SignalRequest) returns (SignalResponse) {}
