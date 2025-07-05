@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package aggregator;
+
+service SignalAggregator {
+  rpc GetSignal (SignalRequest) returns (SignalResponse) {}
+}
+
+message SignalRequest {
+  string symbol = 1;
+}
+
+message SignalResponse {
+  string symbol = 1;
+  double price = 2;
+  double volume = 3;
+  string timestamp = 4;
+}
