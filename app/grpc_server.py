@@ -1,7 +1,8 @@
 import asyncio
 from concurrent import futures
 import grpc
-from protos import signal_pb2_grpc, signal_pb2
+from app.protos import signal_pb2_grpc, signal_pb2
+
 from services.aggregator import get_signal
 
 class SignalAggregator(signal_pb2_grpc.SignalAggregatorServicer):
